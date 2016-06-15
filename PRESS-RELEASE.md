@@ -16,29 +16,19 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-Savor: A Restaurant Recommendation Application
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-For people who care about finding the perfect restaurant to suit the occasion.
+## Savor: Personal food journal that can be shared with friends. ##
+## For people who want to log their meals and find new ones from friends. ##
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-Savor is a restaurant recommendation app that helps people find the perfect restaurant to suit the occasion. Recommenders rate restaurants in three categories: food, service, and ambiance. After answering a few simple questions
+Savor is a simple to use app that lets you record your meals eaten and see what your friends are eating for inspiration!
 ## Problem ##
-  > Describe the problem your product solves.
-
+Often we find ourselves eating the same thing, with Savor you can record your meals and see what you have eaten recently. Also coming up with new meal ideas is always a challenge and now fiends meals can be seen for inspiration.
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
-
-## Quote from You ##
-  > A quote from a spokesperson in your company.
-
+Savor allows for easy logging and sharing of meals.
+## Developer quote ##
+"Savor your meal moment with Savor."
 ## How to Get Started ##
-  > Describe how easy it is to get started.
-
+It's never been easier to get started with Savor, visit the link below.
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+"I've never been more hungry than after visiting the Savor website."
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+Don't delay, give Savor a try at http://savor-app.herokuapp.com/#/

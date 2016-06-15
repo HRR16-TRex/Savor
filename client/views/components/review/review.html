@@ -1,0 +1,37 @@
+<div ng-app="app" ng-controller="reviewCtrl" layout="column" layout-padding="" ng-cloak="">
+<h1>Log your meal</h1>
+  <md-content class="md-no-momentum">
+    <md-input-container class="md-icon-float md-block">
+      <md-icon><i class="material-icons" class="name"></i></md-icon>
+      <input ng-model="meal.restaurant" type="text" placeholder="Restaurant">
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block">
+      <md-icon><i class="material-icons" class="name"></i></md-icon>
+      <input ng-model="meal.meal" type="text" placeholder="Your meal in 10 words or less!" maxlength="100">
+    </md-input-container>
+
+    <md-datepicker ng-model="meal.date" md-placeholder="Enter date"></md-datepicker>
+    
+    <md-input-container md-no-float='' class="md-block">
+      <span>{{250 - meal.notes.length}} Characters remaining</span>
+      <md-icon><i class="material-icons" class="name"></i></md-icon>
+      <input ng-model="meal.notes" ng-trim="false" maxlength="250" type="text" placeholder="250 Characters"><br><br>
+    </md-input-container>
+
+  </md-content>
+
+  <div layout="row">
+    <div class="crop-container">
+      <div class="crop-area">
+        <div class="file-input"><input type="file" id="fileInput" /></div>
+          <img-crop image="myImage" result-image="myCroppedImage" result-image-quality="1.0" result-image-size="490" area-type="square"></img-crop>
+        </div>
+        <div class="cropped-area">
+          <div class="crop-label">Cropped Image:</div>
+          <div><img ng-src="{{myCroppedImage}}" /></div>
+        </div>
+    </div>
+  </div>
+  <md-button class="md-warn md-raised md-hue-2" ng-click="upload()">SUBMIT!</md-button>
+</div>

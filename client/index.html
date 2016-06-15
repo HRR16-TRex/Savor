@@ -3,22 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Savor</title>
+
+</head>
+
   <!-- Auth0's lock widget library -->
-  <script type="text/javascript" src="https://cdn.auth0.com/js/lock-7.12.min.js"></script>
+  <script src="https://cdn.auth0.com/js/lock-7.12.min.js"></script>
+  <!-- Masonry -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-bridget/jquery-bridget.js"></script>
+  <script src="bower_components/ev-emitter/ev-emitter.js"></script>
+  <script src="bower_components/desandro-matches-selector/matches-selector.js"></script>
+  <script src="bower_components/fizzy-ui-utils/utils.js"></script>
+  <script src="bower_components/get-size/get-size.js"></script>
+  <script src="bower_components/outlayer/item.js"></script>
+  <script src="bower_components/outlayer/outlayer.js"></script>
+  <script src="bower_components/masonry/masonry.js"></script>
+  <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200' rel='stylesheet' type='text/css'>
 
   <!-- AngularJS -->
   <script src="bower_components/angular/angular.js"></script>
-  
+
   <!-- Angular cookie wrapper library for client cookies -->
-  <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
   <!-- Angular's Router Library for SPA -->
-  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
   <!-- Auth0's Angular SDK Library -->
-  <script type="text/javascript" src="https://cdn.auth0.com/w2/auth0-angular-4.js"></script>
+  <script src="https://cdn.auth0.com/w2/auth0-angular-4.js"></script>
   <!-- Angular wrapper for localStorage and sessionStorage. Defaults to ng-cookies if not available -->
-  <script src="http://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js" type="text/javascript"> </script>
+  <script src="https://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"> </script>
   <!-- Angular wrapper library for JWT-->
-  <script src="http://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js" type="text/javascript"> </script>
+  <script src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"> </script>
+
+  <!-- Angular image crop -->
+  <script src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+  <link rel="stylesheet" type="text/css" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css">
 
   <!-- ui-route -->
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -27,23 +48,31 @@
   <script src="bower_components/angular-animate/angular-animate.min.js"></script>
   <script src="bower_components/angular-aria/angular-aria.min.js"></script>
   <script src="bower_components/angular-messages/angular-messages.min.js"></script>
-  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+  <!-- <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script> -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- Angular FileUpload -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/10.0.4/ng-file-upload.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/10.0.4/ng-file-upload-shim.min.js'></script>
 
   <!-- Angular Material -->
   <script src="bower_components/angular-material/angular-material.min.js"></script>
-  
+
   <!-- Auth0's Viewport settings-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <!-- My CSS -->
+  <!-- My CSS -->           
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css">
   <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css">
-  
+
  <!--  ANGULAR MATERIAL -->
   <script src="bower_components/angular-material/angular-material.min.js"></script>
   <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+
+  <!--MASONRY-->
+  <script src="bower_components/angular-masonry/angular-masonry.js"></script>
 
   <!-- My Scripts -->
   <script src="app.js"></script>
@@ -51,28 +80,29 @@
   <script src="/views/components/toolbar/toolbar.ctrl.js"></script>
   <script src="/views/components/toolbar/toolbar.dir.js"></script>
   <script src="/views/components/profile/profile.ctrl.js"></script>
-  <script src="/views/components/review/review.dir.js"></script>
-  <script src="/views/components/review/review.ctrl.js"></script>
-  <script src="/views/components/user/user.dir.js"></script>
-  <script src="/views/components/user/user.ctrl.js"></script>
+<!--   <script src="/views/components/review/review.dir.js"></script>
+  <script src="/views/components/review/review.ctrl.js"></script> -->
+  <script src="/views/components/review/review.js"></script>
+  <script src="/views/components/friends/friends.js"></script>
+    
+<!--   <script src="/views/components/user/user.dir.js"></script>
+  <script src="/views/components/user/user.ctrl.js"></script> -->
+  <script src="/views/components/user/user.js"></script>
+  <!-- <script src="http://masonry.desandro.com/masonry.pkgd.js"></script> -->
+  <script src="/views/lib/masonry.grid.js"></script>
+  <script src="/views/components/login/login.ctrl.js"></script>
+  <!-- Do we need this directive ********** -->
+  <!-- <script src="/views/components/login/login.dir.js"></script> -->
   <script src="bower_components/ng-dialog/js/ngDialog.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
-  
+
+  <!-- Custom logo animation -->
+  <script src="/views/components/login/logo.js"></script>
 </head>
 
 <body ng-app="savor" ng-controller="savorCtrl">
-
-<toolbar></toolbar>
-<span class="containerbackground"> </span>
-<div ui-view=''></div>
-
-
-
+  <!-- Display toolbar if the user is authenticated only -->
+  <toolbar ng-show="isUserReallyAuthenticated"></toolbar>
+  <div ui-view=''></div>
 </body>
 </html>
-
-
-
-
-
-

@@ -1,0 +1,16 @@
+
+<div class="grid" masonry>
+  <div class="masonry-brick" ng-repeat="meal in meals | filter: searchMeals" on-finish-render>  
+    <div class="grid-item" ng-click="showme = !showme">
+        <span class="meal-restaurant">{{meal.restaurant}}</span>
+        <div class="meal-header">
+          <img class="meal-avatar" ng-src="{{getTileCardAvatar(meal)}}">
+        </div>
+        <img class="meal-img" ng-src="{{meal.image}}">
+        <span class="meal-title">{{meal.meal}}</span>
+        <span ng-show="showme" class="meal-notes">{{meal.notes}}</span>
+        <span class="meal-date">{{meal.date}}</span>
+      </div>
+    </div>
+  </div>
+</div>

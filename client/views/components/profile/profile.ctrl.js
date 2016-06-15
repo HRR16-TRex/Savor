@@ -2,15 +2,16 @@
     .module('savor.profile', [])
     .controller('profileController', profileController);
 
-  function profileController($http) {
+  function profileController($http, $rootScope) {
 
     var vm = this;
     vm.getMessage = getMessage;
     vm.getSecretMessage = getSecretMessage;
     vm.message;
-
+    
+    // The vm.profile may be where the profile pictures gets pulled from
     vm.profile = JSON.parse(localStorage.getItem('profile'));
-
+    // $rootScope.userProfileImage = vm.profile.picture;
     // Makes a call to a public API route that
     // does not require authentication. We can
     // avoid sending the JWT as an Authorization

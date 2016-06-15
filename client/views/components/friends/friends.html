@@ -1,0 +1,17 @@
+<div ng-app="app" ng-controller="friendsController" layout="column" layout-padding="" ng-cloak="">
+
+  <md-content class="md-no-momentum"> 
+    <md-input-container class="md-icon-float md-block" flex>
+      <md-icon><i class="material-icons" class="name"></i>search</md-icon>
+      <input ng-model="searchUsers" type="text" placeholder="Search For Users Here">
+    </md-input-container>
+  </md-content>
+  <div>
+    <md-button
+      ng-repeat="user in userList | filter: searchUsers track by $index"
+      ng-click="addFriendToUser(user)"
+      aria-label=user>
+      {{user.username}}
+    </md-button>
+  </div>
+</div>

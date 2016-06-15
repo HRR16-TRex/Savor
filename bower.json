@@ -13,6 +13,8 @@
     "bower_components"
   ],
   "dependencies": {
+    "jquery": "3.0.0",
+    "jquery-bridget": "2.0.0",
     "angular": "1.5.5",
     "angular-material": "1.1.0-rc2",
     "materialize": "0.97.6",
@@ -23,9 +25,30 @@
     "angular-aria": "1.5.3",
     "angular-messages": "1.5.3",
     "angular-material-icons": "0.4.0",
-    "ng-dialog": "^0.6.1"
+    "ng-dialog": "0.6.1",
+    "underscore": "1.8.3",
+    "ng-file-upload": "12.0.4",
+    "ng-img-crop": "ngImgCrop#0.3.2",
+    "masonry": "4.1.0",
+    "angular-masonry": "0.16.0"
   },
   "resolutions": {
-    "angular": "1.5.5"
+    "angular": "1.5.5",
+    "masonry": "4.0.0",
+    "outlayer": "2.1.0",
+    "jquery": "3.0.0"
+  },
+  "overrides": {
+    "ev-emitter": {
+      "dependencies": {
+        "jquery-bridget": "2.0.0"
+      }
+    },
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    }
   }
 }

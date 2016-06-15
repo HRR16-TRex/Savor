@@ -29,9 +29,14 @@ dist/
 node_modules/
 bower_components/
 data/
+uploads/
+
+# Authentication
+server/authEnvironment.js
 
 # Floobits
 .floo
 .floobit
 .floo
 .flooignore
+.env

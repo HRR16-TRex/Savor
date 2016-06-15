@@ -1,62 +1,64 @@
-<!-- components/toolbar/toolbar.tpl.html -->
-
-<!-- <head> -->
-
-
-  <!-- My CSS -->
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
- <!--  Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
-
-<!-- Optional theme -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
-
-<!-- Latest compiled and minified JavaScript -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-
-  
-  
-<!-- </head> -->
-<body>
+  <script src="/views/components/login/logo.js"></script>
 
 <md-toolbar>
   <div class="md-toolbar-tools themer">
-  <img class= "logo" src="/views/components/toolbar/SAVOR4XWHITEXBLACK.png">
+  <!-- <img class= "logo" src="/views/components/toolbar/SAVOR4XWHITEXBLACK.png"> -->
+  <div id="output" onclick="cleanThisLogoUp()">Savor</div>
     <span flex></span>
-    
-    <md-button
-      aria-label="Login"
-      ui-sref="toolbar"
-      ng-if="!toolbar.auth.isAuthenticated"
-      ng-click="toolbar.login()">
-      Login
-    </md-button>
+
+    <md-input-container class="md-icon-float md-block" flex>
+      <md-icon><i class="material-icons" class="name"></i>search</md-icon>
+      <input ng-model="searchMeals" type="text" placeholder="Search Here">
+    </md-input-container>
 
     <md-button
       ui-sref="user"
       aria-label="Write Review"
       style="float:right" 
       ng-click="openReview()"
-      ng-if="toolbar.auth.isAuthenticated"
       aria-label="User">
       <i class="material-icons" class="name">mode_edit</i></md-icon>
     </md-button>
-
-    <md-button
-      aria-label="Logout"
-      ui-sref="toolbar"
-      ng-if="toolbar.auth.isAuthenticated"
-      ng-click="toolbar.logout()">
-      Logout
-    </md-button>
     
+    <!-- Search bar here -->
 
+    <md-menu>
+      <md-button
+        aria-label="user"
+        ng-click="$mdOpenMenu($event)"
+        style="float:right"
+        ui-sref="userDropdown">
+        <img class="userToolbarPhoto" ng-src="{{ userOnRootScope.picture }}">
+      </md-button>
+      <md-menu-content>
+        <md-menu-item>
+          <md-button
+            ng-click="openFriendsList()">
+            Friends
+          </md-button>
+        </md-menu-item>
+        <!-- <md-menu-item>
+          <md-button>
+            Edit
+          </md-button>
+        </md-menu-item> -->
+        <md-menu-item>
+          <md-button
+            aria-label="Logout"
+            ui-sref="toolbar"
+            ng-if="toolbar.auth.isAuthenticated"
+            ng-click="toolbar.logout()">
+            Logout
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  
   </div>
-<span class="container" ng-if="!toolbar.auth.isAuthenticated">
-  <img class= "rotatingLogo" src="/views/components/toolbar/SAVOR4XWHITEXBLACK.png">
-</span>
+  <span class="container" ng-if="!toolbar.auth.isAuthenticated">
+    <img class= "rotatingLogo" src="/views/components/toolbar/SAVOR4XWHITEXBLACK.png">
+  </span>
 </md-toolbar>
-</body>
